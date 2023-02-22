@@ -1,3 +1,5 @@
+/* This is just placeholder code. Paste in the config code from the tailwind play mockup provided */
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
