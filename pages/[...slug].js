@@ -1,13 +1,14 @@
 import Section from "../components/Section";
-import { getMetaData, getPageData, getParentUrl } from "../lib/api";
+import { getMetaData, getPageData, getPagePaths } from "../lib/api";
 import { useEffect } from "react";
 import Link from "next/link";
 
-export default function Home({ pageData }) {
+export default function Home({ pageData, params }) {
   const { sections } = pageData?.fields;
 
   useEffect(() => {
-    console.log(pageData);
+    console.log("PageData: ", pageData);
+    console.log("Params: ", params);
   });
 
   return (
@@ -48,8 +49,17 @@ export default function Home({ pageData }) {
   );
 }
 
-export async function getStaticProps() {
-  const pageData = await getPageData("home");
+export async function getStaticPaths() {
+  const pagePaths = await getPagePaths();
+
+  return {
+    paths: pagePaths,
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const pageData = await getPageData(params?.slug?.[params?.slug?.length - 1]);
 
   // used in the page layout
   const metaData = await getMetaData();
@@ -58,6 +68,7 @@ export async function getStaticProps() {
     props: {
       pageData,
       metaData,
+      params,
     },
   };
 }
