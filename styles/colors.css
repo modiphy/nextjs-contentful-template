@@ -8,172 +8,172 @@ title, subtitle, and body colors change based on background color
 set initial variables
 */
 :root {
-  --theme-title-color: theme('colors.gray.900');
-  --theme-subtitle-color: theme('colors.gray.600');
-  --theme-title-primary-color: theme('colors.primary.400');
-  --theme-body-color: theme('colors.gray.500');
-  --theme-muted-color: theme('colors.gray.400');
-  --theme-muted-primary-color: theme('colors.primary.500');
-  --theme-text-hover-color: theme('colors.primary.800');
-  --theme-border-color: theme('colors.gray.200');
-  --theme-border-hover-color: theme('colors.primary.500');
+  --theme-title-color: theme("colors.gray.900");
+  --theme-subtitle-color: theme("colors.gray.600");
+  --theme-title-primary-color: theme("colors.primary.400");
+  --theme-body-color: theme("colors.gray.500");
+  --theme-muted-color: theme("colors.gray.400");
+  --theme-muted-primary-color: theme("colors.primary.500");
+  --theme-text-hover-color: theme("colors.primary.800");
+  --theme-border-color: theme("colors.gray.200");
+  --theme-border-hover-color: theme("colors.primary.500");
 }
 
 /* gray shade backgrounds */
 .bg-white,
 .bg-gray-50 {
-  --theme-title-color: theme('colors.gray.900');
-  --theme-subtitle-color: theme('colors.gray.600');
-  --theme-title-primary-color: theme('colors.primary.400');
-  --theme-body-color: theme('colors.gray.500');
-  --theme-muted-color: theme('colors.gray.400');
-  --theme-muted-primary-color: theme('colors.primary.500');
-  --theme-text-hover-color: theme('colors.primary.800');
-  --theme-border-color: theme('colors.gray.200');
-  --theme-border-hover-color: theme('colors.primary.500');
+  --theme-title-color: theme("colors.gray.900");
+  --theme-subtitle-color: theme("colors.gray.600");
+  --theme-title-primary-color: theme("colors.primary.400");
+  --theme-body-color: theme("colors.gray.500");
+  --theme-muted-color: theme("colors.gray.400");
+  --theme-muted-primary-color: theme("colors.primary.500");
+  --theme-text-hover-color: theme("colors.primary.800");
+  --theme-border-color: theme("colors.gray.200");
+  --theme-border-hover-color: theme("colors.primary.500");
 }
 
 .bg-gray-100,
 .bg-gray-200 {
-  --theme-title-color: theme('colors.gray.900');
-  --theme-subtitle-color: theme('colors.gray.600');
-  --theme-title-primary-color: theme('colors.primary.600');
-  --theme-body-color: theme('colors.gray.600');
-  --theme-muted-color: theme('colors.gray.400');
-  --theme-muted-primary-color: theme('colors.primary.500');
-  --theme-text-hover-color: theme('colors.primary.700');
-  --theme-border-color: theme('colors.gray.300');
-  --theme-border-hover-color: theme('colors.primary.600');
+  --theme-title-color: theme("colors.gray.900");
+  --theme-subtitle-color: theme("colors.gray.600");
+  --theme-title-primary-color: theme("colors.primary.600");
+  --theme-body-color: theme("colors.gray.600");
+  --theme-muted-color: theme("colors.gray.400");
+  --theme-muted-primary-color: theme("colors.primary.500");
+  --theme-text-hover-color: theme("colors.primary.700");
+  --theme-border-color: theme("colors.gray.300");
+  --theme-border-hover-color: theme("colors.primary.600");
 }
 
 .bg-gray-300,
 .bg-gray-400 {
-  --theme-title-color: theme('colors.gray.900');
-  --theme-subtitle-color: theme('colors.gray.700');
-  --theme-title-primary-color: theme('colors.primary.700');
-  --theme-body-color: theme('colors.gray.800');
-  --theme-muted-color: theme('colors.gray.500');
-  --theme-muted-primary-color: theme('colors.primary.500');
-  --theme-text-hover-color: theme('colors.primary.900');
-  --theme-border-color: theme('colors.gray.500');
-  --theme-border-hover-color: theme('colors.primary.700');
+  --theme-title-color: theme("colors.gray.900");
+  --theme-subtitle-color: theme("colors.gray.700");
+  --theme-title-primary-color: theme("colors.primary.700");
+  --theme-body-color: theme("colors.gray.800");
+  --theme-muted-color: theme("colors.gray.500");
+  --theme-muted-primary-color: theme("colors.primary.500");
+  --theme-text-hover-color: theme("colors.primary.900");
+  --theme-border-color: theme("colors.gray.500");
+  --theme-border-hover-color: theme("colors.primary.700");
 }
 
 .bg-gray-500,
 .bg-gray-600 {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.white');
-  --theme-title-primary-color: theme('colors.primary.300');
-  --theme-body-color: theme('colors.gray.50');
-  --theme-muted-color: theme('colors.gray.400');
-  --theme-muted-primary-color: theme('colors.primary.300');
-  --theme-text-hover-color: theme('colors.primary.200');
-  --theme-border-color: theme('colors.gray.400');
-  --theme-border-hover-color: theme('colors.white');
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.white");
+  --theme-title-primary-color: theme("colors.primary.300");
+  --theme-body-color: theme("colors.gray.50");
+  --theme-muted-color: theme("colors.gray.400");
+  --theme-muted-primary-color: theme("colors.primary.300");
+  --theme-text-hover-color: theme("colors.primary.200");
+  --theme-border-color: theme("colors.gray.400");
+  --theme-border-hover-color: theme("colors.white");
 }
 
 .bg-gray-700 {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.white');
-  --theme-title-primary-color: theme('colors.primary.300');
-  --theme-body-color: theme('colors.gray.100');
-  --theme-muted-color: theme('colors.gray.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.primary.200');
-  --theme-border-color: theme('colors.gray.500');
-  --theme-border-hover-color: theme('colors.white');
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.white");
+  --theme-title-primary-color: theme("colors.primary.300");
+  --theme-body-color: theme("colors.gray.100");
+  --theme-muted-color: theme("colors.gray.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.primary.200");
+  --theme-border-color: theme("colors.gray.500");
+  --theme-border-hover-color: theme("colors.white");
 }
 
 .bg-gray-800,
 .bg-gray-900,
 .bg-black {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.gray.100');
-  --theme-title-primary-color: theme('colors.primary.400');
-  --theme-body-color: theme('colors.gray.200');
-  --theme-muted-color: theme('colors.gray.500');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.primary.100');
-  --theme-border-color: theme('colors.gray.600');
-  --theme-border-hover-color: theme('colors.gray.200');
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.gray.100");
+  --theme-title-primary-color: theme("colors.primary.400");
+  --theme-body-color: theme("colors.gray.200");
+  --theme-muted-color: theme("colors.gray.500");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.primary.100");
+  --theme-border-color: theme("colors.gray.600");
+  --theme-border-hover-color: theme("colors.gray.200");
 }
 
 /* primary shade backgrounds */
 .bg-primary-50 {
-  --theme-title-color: theme('colors.gray.900');
-  --theme-subtitle-color: theme('colors.primary.800');
-  --theme-title-primary-color: theme('colors.primary.800');
-  --theme-body-color: theme('colors.primary.700');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.primary.900');
-  --theme-border-color: theme('colors.primary.200');
-  --theme-border-hover-color: theme('colors.primary.500');
-
+  --theme-title-color: theme("colors.gray.900");
+  --theme-subtitle-color: theme("colors.primary.800");
+  --theme-title-primary-color: theme("colors.primary.800");
+  --theme-body-color: theme("colors.primary.700");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.primary.900");
+  --theme-border-color: theme("colors.primary.200");
+  --theme-border-hover-color: theme("colors.primary.500");
 }
 
 .bg-primary-100,
 .bg-primary-200 {
-  --theme-title-color: theme('colors.gray.800');
-  --theme-subtitle-color: theme('colors.primary.900');
-  --theme-title-primary-color: theme('colors.primary.900');
-  --theme-body-color: theme('colors.primary.800');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.primary.700');
-  --theme-border-color: theme('colors.primary.300');
-  --theme-border-hover-color: theme('colors.primary.600');
+  --theme-title-color: theme("colors.gray.800");
+  --theme-subtitle-color: theme("colors.primary.900");
+  --theme-title-primary-color: theme("colors.primary.900");
+  --theme-body-color: theme("colors.primary.800");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.primary.700");
+  --theme-border-color: theme("colors.primary.300");
+  --theme-border-hover-color: theme("colors.primary.600");
 }
 
 /* primary shade backgrounds */
 .bg-primary-300,
-.bg-primary-400  {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.white');
-  --theme-title-primary-color: theme('colors.white');
-  --theme-body-color: theme('colors.white');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.white');
-  --theme-border-color: theme('colors.primary.400');
-  --theme-border-hover-color: theme('colors.white');
+.bg-primary-400 {
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.white");
+  --theme-title-primary-color: theme("colors.white");
+  --theme-body-color: theme("colors.white");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.white");
+  --theme-border-color: theme("colors.primary.400");
+  --theme-border-hover-color: theme("colors.white");
 }
 
-.bg-primary-500, .bg-primary-600 {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.white');
-  --theme-title-primary-color: theme('colors.white');
-  --theme-body-color: theme('colors.white');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.white');
-  --theme-border-color: theme('colors.primary.400');
-  --theme-border-hover-color: theme('colors.white');
+.bg-primary-500,
+.bg-primary-600 {
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.white");
+  --theme-title-primary-color: theme("colors.white");
+  --theme-body-color: theme("colors.white");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.white");
+  --theme-border-color: theme("colors.primary.400");
+  --theme-border-hover-color: theme("colors.white");
 }
 
 .bg-primary-700,
 .bg-primary-800 {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.primary.100');
-  --theme-title-primary-color: theme('colors.primary.100');
-  --theme-body-color: theme('colors.primary.100');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.white');
-  --theme-border-color: theme('colors.primary.500');
-  --theme-border-hover-color: theme('colors.primary.100');
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.primary.100");
+  --theme-title-primary-color: theme("colors.primary.100");
+  --theme-body-color: theme("colors.primary.100");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.white");
+  --theme-border-color: theme("colors.primary.500");
+  --theme-border-hover-color: theme("colors.primary.100");
 }
 
 .bg-primary-900 {
-  --theme-title-color: theme('colors.white');
-  --theme-subtitle-color: theme('colors.primary.200');
-  --theme-title-primary-color: theme('colors.primary.200');
-  --theme-body-color: theme('colors.primary.200');
-  --theme-muted-color: theme('colors.primary.400');
-  --theme-muted-primary-color: theme('colors.primary.400');
-  --theme-text-hover-color: theme('colors.white');
-  --theme-border-color: theme('colors.primary.600');
-  --theme-border-hover-color: theme('colors.primary.200');
+  --theme-title-color: theme("colors.white");
+  --theme-subtitle-color: theme("colors.primary.200");
+  --theme-title-primary-color: theme("colors.primary.200");
+  --theme-body-color: theme("colors.primary.200");
+  --theme-muted-color: theme("colors.primary.400");
+  --theme-muted-primary-color: theme("colors.primary.400");
+  --theme-text-hover-color: theme("colors.white");
+  --theme-border-color: theme("colors.primary.600");
+  --theme-border-hover-color: theme("colors.primary.200");
 }
 
 /* primary shade backgrounds */
@@ -256,14 +256,14 @@ set initial variables
 header bg color changes to white on scroll */
 @media (min-width: 1280px) {
   .xl\:bg-white {
-    --theme-title-color: theme('colors.gray.900');
-    --theme-subtitle-color: theme('colors.gray.600');
-    --theme-title-primary-color: theme('colors.primary.600');
-    --theme-body-color: theme('colors.gray.500');
-    --theme-muted-color: theme('colors.gray.400');
-    --theme-muted-primary-color: theme('colors.primary.500');
-    --theme-text-hover-color: theme('colors.primary.700');
-    --theme-border-color: theme('colors.gray.200');
-    --theme-border-hover-color: theme('colors.primary.500');
+    --theme-title-color: theme("colors.gray.900");
+    --theme-subtitle-color: theme("colors.gray.600");
+    --theme-title-primary-color: theme("colors.primary.600");
+    --theme-body-color: theme("colors.gray.500");
+    --theme-muted-color: theme("colors.gray.400");
+    --theme-muted-primary-color: theme("colors.primary.500");
+    --theme-text-hover-color: theme("colors.primary.700");
+    --theme-border-color: theme("colors.gray.200");
+    --theme-border-hover-color: theme("colors.primary.500");
   }
 }

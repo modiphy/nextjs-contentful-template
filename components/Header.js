@@ -10,11 +10,9 @@ import { forwardRef } from "react";
 const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props;
   return (
-    (<Link href={href} ref={ref} {...rest}>
-
+    <Link href={href} ref={ref} {...rest}>
       {children}
-
-    </Link>)
+    </Link>
   );
 });
 
@@ -49,7 +47,6 @@ export default function Header() {
         <div className="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
           <div className="flex justify-start lg:flex-1">
             <Link href="/" className="cursor-pointer">
-
               <span className="sr-only">Your Company</span>
               {/* Mobile Site Logo */}
               <div className="xl:hidden">
@@ -62,8 +59,7 @@ export default function Header() {
                         ?.height
                     }
                     width={
-                      data?.mobileLogoWhite?.fields?.file?.details?.image
-                        ?.width
+                      data?.mobileLogoWhite?.fields?.file?.details?.image?.width
                     }
                     alt={data?.mobileLogoWhite?.fields?.title}
                     objectfit="cover"
@@ -90,8 +86,7 @@ export default function Header() {
                     className="h-6 w-auto "
                     src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
                     height={
-                      data?.siteLogoWhite?.fields?.file?.details?.image
-                        ?.height
+                      data?.siteLogoWhite?.fields?.file?.details?.image?.height
                     }
                     width={
                       data?.siteLogoWhite?.fields?.file?.details?.image?.width
@@ -107,14 +102,11 @@ export default function Header() {
                     height={
                       data?.siteLogo?.fields?.file?.details?.image?.height
                     }
-                    width={
-                      data?.siteLogo?.fields?.file?.details?.image?.width
-                    }
+                    width={data?.siteLogo?.fields?.file?.details?.image?.width}
                     alt={data?.siteLogo?.fields?.title}
                   />
                 )}
               </div>
-
             </Link>
           </div>
 
@@ -130,16 +122,15 @@ export default function Header() {
                       key={navLink?.fields?.title}
                     />
                   ) : (
-                    (<Link
+                    <Link
                       href={`/${navLink?.fields?.slug}`}
                       key={navLink?.fields?.title}
                       className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
                         isScrolling && "text-black hover:text-gray-600"
-                      }`}>
-
+                      }`}
+                    >
                       {navLink?.fields?.title}
-
-                    </Link>)
+                    </Link>
                   );
                 })}
               </nav>
@@ -152,18 +143,17 @@ export default function Header() {
                     callToActionButton?.sys?.contentType?.sys?.id;
                   if (contentType === "buttonLink") {
                     return (
-                      (<Link
+                      <Link
                         href={`/${callToActionButton?.fields?.page?.fields?.slug}`}
                         key={callToActionButton?.fields?.text}
                         className={`button font-sans uppercase tracking-wider ${
                           isScrolling
                             ? "border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-white"
                             : "button button inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
-                        }`}>
-
+                        }`}
+                      >
                         {callToActionButton?.fields?.text}
-
-                      </Link>)
+                      </Link>
                     );
                   } else if (contentType === "callLink") {
                     // format number text. remove all characters that are not digits
