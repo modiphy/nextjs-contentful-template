@@ -1,7 +1,12 @@
+import Link from "next/link";
+
 export default function Button({ text, pageRef, url, className = "" }) {
   return (
-    <a href={pageRef ? `/${pageRef.fields.slug}` : url} className={className}>
+    <Link
+      href={pageRef ? `/${pageRef.fields.slug}` : url}
+      className={className}
+    >
       {text}
-    </a>
+    </Link>
   );
 }

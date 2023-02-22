@@ -39,10 +39,12 @@ export default function Footer({ pageData }) {
               if (footerNavItem?.fields?.childPages) {
                 return (
                   <div className="py-2" key={footerNavItem?.fields?.title}>
-                    <Link href={`${footerNavItem?.fields?.slug}`}>
-                      <a className="text-base font-semibold uppercase tracking-wide text-gray-200 hover:text-primary-100">
-                        {footerNavItem?.fields?.title}
-                      </a>
+                    <Link
+                      href={`${footerNavItem?.fields?.slug}`}
+                      className="text-base font-semibold uppercase tracking-wide text-gray-200 hover:text-primary-100">
+
+                      {footerNavItem?.fields?.title}
+
                     </Link>
                     <ul className="mt-3 space-y-1">
                       {footerNavItem?.fields?.childPages?.map((childPage) => (
@@ -50,10 +52,10 @@ export default function Footer({ pageData }) {
                           <Link
                             href={`${childPage?.fields?.slug}`}
                             target="_self"
-                          >
-                            <a className="text-sm font-normal text-gray-200 hover:text-white">
-                              {childPage?.fields?.title}
-                            </a>
+                            className="text-sm font-normal text-gray-200 hover:text-white">
+
+                            {childPage?.fields?.title}
+
                           </Link>
                         </li>
                       ))}
@@ -67,10 +69,10 @@ export default function Footer({ pageData }) {
                       <Link
                         href={`${footerNavItem?.fields?.slug}`}
                         target="_self"
-                      >
-                        <a className="hover:text-white text-gray-200">
-                          {footerNavItem?.fields?.title}
-                        </a>
+                        className="hover:text-white text-gray-200">
+
+                        {footerNavItem?.fields?.title}
+
                       </Link>
                     </div>
                   </div>
@@ -82,21 +84,21 @@ export default function Footer({ pageData }) {
 
         {data?.footerLogo && (
           <div className="text-center">
-            <Link href="/">
-              <a className="inline-block">
-                <div>
-                  <Image
-                    src={`https:${data?.footerLogo?.fields?.file?.url}`}
-                    height={
-                      data?.footerLogo?.fields?.file?.details?.image?.height
-                    }
-                    width={
-                      data?.footerLogo?.fields?.file?.details?.image?.width
-                    }
-                    alt="Footer Logo"
-                  />
-                </div>
-              </a>
+            <Link href="/" className="inline-block">
+
+              <div>
+                <Image
+                  src={`https:${data?.footerLogo?.fields?.file?.url}`}
+                  height={
+                    data?.footerLogo?.fields?.file?.details?.image?.height
+                  }
+                  width={
+                    data?.footerLogo?.fields?.file?.details?.image?.width
+                  }
+                  alt="Footer Logo"
+                />
+              </div>
+
             </Link>
           </div>
         )}
@@ -107,24 +109,24 @@ export default function Footer({ pageData }) {
         {data?.socials && (
           <div className="flex justify-center space-x-5">
             {data?.socials?.map((socialLink) => (
-              <Link
+              (<Link
                 key={socialLink?.fields?.socialMedia}
                 href={`${socialLink?.fields?.link}`}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <a className="text-gray-400 hover:text-white">
-                  <span className="sr-only">
-                    {socialLink?.fields?.socialMedia}
-                  </span>
-                  <span
-                    className="fill-gray-400 transition-colors hover:fill-white"
-                    dangerouslySetInnerHTML={{
-                      __html: socialLink?.fields?.iconSvg,
-                    }}
-                  ></span>
-                </a>
-              </Link>
+                className="text-gray-400 hover:text-white">
+
+                <span className="sr-only">
+                  {socialLink?.fields?.socialMedia}
+                </span>
+                <span
+                  className="fill-gray-400 transition-colors hover:fill-white"
+                  dangerouslySetInnerHTML={{
+                    __html: socialLink?.fields?.iconSvg,
+                  }}
+                ></span>
+
+              </Link>)
             ))}
           </div>
         )}

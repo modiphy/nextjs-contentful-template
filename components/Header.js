@@ -10,11 +10,11 @@ import { forwardRef } from "react";
 const MyLink = forwardRef((props, ref) => {
   let { href, children, ...rest } = props;
   return (
-    <Link href={href}>
-      <a ref={ref} {...rest}>
-        {children}
-      </a>
-    </Link>
+    (<Link href={href} ref={ref} {...rest}>
+
+      {children}
+
+    </Link>)
   );
 });
 
@@ -48,74 +48,73 @@ export default function Header() {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
           <div className="flex justify-start lg:flex-1">
-            <Link href="/">
-              <a className="cursor-pointer">
-                <span className="sr-only">Your Company</span>
-                {/* Mobile Site Logo */}
-                <div className="xl:hidden">
-                  {data?.mobileLogoWhite && !isScrolling && (
-                    <img
-                      className="h-6 w-auto "
-                      src={`https:${data?.mobileLogoWhite?.fields?.file?.url}`}
-                      height={
-                        data?.mobileLogoWhite?.fields?.file?.details?.image
-                          ?.height
-                      }
-                      width={
-                        data?.mobileLogoWhite?.fields?.file?.details?.image
-                          ?.width
-                      }
-                      alt={data?.mobileLogoWhite?.fields?.title}
-                      objectfit="cover"
-                    />
-                  )}
-                  {data?.mobileLogo && isScrolling && (
-                    <img
-                      className="h-6 w-auto "
-                      src={`https:${data?.mobileLogo?.fields?.file?.url}`}
-                      height={
-                        data?.mobileLogo?.fields?.file?.details?.image?.height
-                      }
-                      width={
-                        data?.mobileLogo?.fields?.file?.details?.image?.width
-                      }
-                      alt={data?.mobileLogo?.fields?.title}
-                    />
-                  )}
-                </div>
+            <Link href="/" className="cursor-pointer">
 
-                {/* Site Logo */}
-                <div className="hidden xl:block">
-                  {data?.siteLogoWhite && !isScrolling && (
-                    <Image
-                      className="h-6 w-auto "
-                      src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
-                      height={
-                        data?.siteLogoWhite?.fields?.file?.details?.image
-                          ?.height
-                      }
-                      width={
-                        data?.siteLogoWhite?.fields?.file?.details?.image?.width
-                      }
-                      alt={data?.siteLogoWhite?.fields?.title}
-                      objectfit="cover"
-                    />
-                  )}
-                  {data?.siteLogo && isScrolling && (
-                    <Image
-                      className="h-6 w-auto "
-                      src={`https:${data?.siteLogo?.fields?.file?.url}`}
-                      height={
-                        data?.siteLogo?.fields?.file?.details?.image?.height
-                      }
-                      width={
-                        data?.siteLogo?.fields?.file?.details?.image?.width
-                      }
-                      alt={data?.siteLogo?.fields?.title}
-                    />
-                  )}
-                </div>
-              </a>
+              <span className="sr-only">Your Company</span>
+              {/* Mobile Site Logo */}
+              <div className="xl:hidden">
+                {data?.mobileLogoWhite && !isScrolling && (
+                  <img
+                    className="h-6 w-auto "
+                    src={`https:${data?.mobileLogoWhite?.fields?.file?.url}`}
+                    height={
+                      data?.mobileLogoWhite?.fields?.file?.details?.image
+                        ?.height
+                    }
+                    width={
+                      data?.mobileLogoWhite?.fields?.file?.details?.image
+                        ?.width
+                    }
+                    alt={data?.mobileLogoWhite?.fields?.title}
+                    objectfit="cover"
+                  />
+                )}
+                {data?.mobileLogo && isScrolling && (
+                  <img
+                    className="h-6 w-auto "
+                    src={`https:${data?.mobileLogo?.fields?.file?.url}`}
+                    height={
+                      data?.mobileLogo?.fields?.file?.details?.image?.height
+                    }
+                    width={
+                      data?.mobileLogo?.fields?.file?.details?.image?.width
+                    }
+                    alt={data?.mobileLogo?.fields?.title}
+                  />
+                )}
+              </div>
+              {/* Site Logo */}
+              <div className="hidden xl:block">
+                {data?.siteLogoWhite && !isScrolling && (
+                  <Image
+                    className="h-6 w-auto "
+                    src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
+                    height={
+                      data?.siteLogoWhite?.fields?.file?.details?.image
+                        ?.height
+                    }
+                    width={
+                      data?.siteLogoWhite?.fields?.file?.details?.image?.width
+                    }
+                    alt={data?.siteLogoWhite?.fields?.title}
+                    objectfit="cover"
+                  />
+                )}
+                {data?.siteLogo && isScrolling && (
+                  <Image
+                    className="h-6 w-auto "
+                    src={`https:${data?.siteLogo?.fields?.file?.url}`}
+                    height={
+                      data?.siteLogo?.fields?.file?.details?.image?.height
+                    }
+                    width={
+                      data?.siteLogo?.fields?.file?.details?.image?.width
+                    }
+                    alt={data?.siteLogo?.fields?.title}
+                  />
+                )}
+              </div>
+
             </Link>
           </div>
 
@@ -131,18 +130,16 @@ export default function Header() {
                       key={navLink?.fields?.title}
                     />
                   ) : (
-                    <Link
+                    (<Link
                       href={`/${navLink?.fields?.slug}`}
                       key={navLink?.fields?.title}
-                    >
-                      <a
-                        className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
-                          isScrolling && "text-black hover:text-gray-600"
-                        }`}
-                      >
-                        {navLink?.fields?.title}
-                      </a>
-                    </Link>
+                      className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
+                        isScrolling && "text-black hover:text-gray-600"
+                      }`}>
+
+                      {navLink?.fields?.title}
+
+                    </Link>)
                   );
                 })}
               </nav>
@@ -155,20 +152,18 @@ export default function Header() {
                     callToActionButton?.sys?.contentType?.sys?.id;
                   if (contentType === "buttonLink") {
                     return (
-                      <Link
+                      (<Link
                         href={`/${callToActionButton?.fields?.page?.fields?.slug}`}
                         key={callToActionButton?.fields?.text}
-                      >
-                        <a
-                          className={`button font-sans uppercase tracking-wider ${
-                            isScrolling
-                              ? "border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-white"
-                              : "button button inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
-                          }`}
-                        >
-                          {callToActionButton?.fields?.text}
-                        </a>
-                      </Link>
+                        className={`button font-sans uppercase tracking-wider ${
+                          isScrolling
+                            ? "border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-white"
+                            : "button button inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
+                        }`}>
+
+                        {callToActionButton?.fields?.text}
+
+                      </Link>)
                     );
                   } else if (contentType === "callLink") {
                     // format number text. remove all characters that are not digits

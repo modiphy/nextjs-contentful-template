@@ -74,9 +74,9 @@ export default function FooterEmailSignup({ title }) {
                 href="/privacy-policy"
                 className="font-bold text-gray-300 hover:underline"
               >
-                <a className="font-bold text-gray-300 hover:underline">
-                  <> Privacy Policy.</>
-                </a>
+
+                <> Privacy Policy.</>
+
               </Link>
             </p>
           </div>

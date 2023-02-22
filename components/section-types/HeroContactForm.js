@@ -49,11 +49,13 @@ export default function HeroContactForm({
         </ul>
       ),
       [INLINES.HYPERLINK]: (node, children) => (
-        <Link href={node?.data?.uri}>
-          <a className="text-2xl font-medium uppercase tracking-wide text-white md:text-xl lg:text-base xl:text-lg 2xl:text-xl">
-            {children}
-          </a>
-        </Link>
+        (<Link
+          href={node?.data?.uri}
+          className="text-2xl font-medium uppercase tracking-wide text-white md:text-xl lg:text-base xl:text-lg 2xl:text-xl">
+
+          {children}
+
+        </Link>)
       ),
     },
   };
@@ -164,10 +166,12 @@ export default function HeroContactForm({
                       <p className="text-xs leading-5 text-gray-500">
                         {" "}
                         We care about protecting your data. Read our{" "}
-                        <Link href="/privacy-policy">
-                          <a className="font-bold text-gray-700 hover:underline">
+                        <Link
+                          href="/privacy-policy"
+                          className="font-bold text-gray-700 hover:underline">
+                          
                             Privacy Policy.
-                          </a>
+                          
                         </Link>
                       </p>
                     </div>
