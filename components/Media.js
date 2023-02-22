@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ogImage from "../public/og-image.png";
 
 export default function Media({ media }) {

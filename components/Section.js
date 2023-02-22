@@ -1,6 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import * as sectionTypes from "./section-types";
 import * as customSectionTypes from "./custom-section-types";

@@ -2,7 +2,7 @@ import { getFooterData } from "../lib/api";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ContactInformationItem from "./ContactInformationItem";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Footer({ pageData }) {
   const [data, setData] = useState();

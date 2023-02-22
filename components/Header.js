@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { getHeaderData } from "../lib/api";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import Button from "./Button";
 import NestedLink from "./NestedLink";
