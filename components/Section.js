@@ -5,22 +5,21 @@ import Image from "next/image";
 import * as sectionTypes from "./section-types";
 import * as customSectionTypes from "./custom-section-types";
 
-const components = {
-  "hero-contact-form": sectionTypes.HeroContactForm,
-  default: sectionTypes.Default,
-  "interior-hero": sectionTypes.InteriorHero,
-  "footer-call-to-action": sectionTypes.FooterCallToAction,
-  "footer-email-signup": sectionTypes.FooterEmailSignup,
-  "image-right-detached-title": sectionTypes.ImageRightDetachedTitle,
-  "image-right": sectionTypes.ImageRight,
-};
+const sectionComponents = { ...sectionTypes, ...customSectionTypes };
 
 export default function Section({ data, marginBottom, marginTop }) {
   const { fields } = data;
   const { type } = fields;
-  const Section = fields.customType
-    ? components[fields.customType]
-    : components[type];
+
+  const formatComponent = (string) =>
+    string
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("");
+
+  const DynamicSection = fields.customType
+    ? sectionComponents[formatComponent(fields.customType)]
+    : sectionComponents[formatComponent(type)];
 
   const options = {
     renderNode: {
@@ -47,10 +46,10 @@ export default function Section({ data, marginBottom, marginTop }) {
   // render rich text from data
   const body = documentToReactComponents(fields.body, options);
 
-  if (Section) {
+  if (DynamicSection) {
     return (
       <>
-        <Section
+        <DynamicSection
           data={data}
           title={fields?.title}
           subtitle={fields?.subtitle}
