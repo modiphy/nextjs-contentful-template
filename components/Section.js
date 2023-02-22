@@ -12,13 +12,7 @@ const components = {
   "footer-call-to-action": sectionTypes.FooterCallToAction,
   "footer-email-signup": sectionTypes.FooterEmailSignup,
   "image-right-detached-title": sectionTypes.ImageRightDetachedTitle,
-  "home-hero": customSectionTypes.HomeHero,
   "image-right": sectionTypes.ImageRight,
-  "hot-tar-roofing": customSectionTypes.HotTarRoofing,
-  "list-of-services": customSectionTypes.ListOfServices,
-  "building-better-roofs": customSectionTypes.BuildingBetterRoofs,
-  "list-of-services-services-page":
-    customSectionTypes.ListOfServicesServicesPage,
 };
 
 export default function Section({ data, marginBottom, marginTop }) {
