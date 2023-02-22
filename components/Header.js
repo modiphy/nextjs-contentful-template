@@ -66,7 +66,7 @@ export default function Header() {
                           ?.width
                       }
                       alt={data?.mobileLogoWhite?.fields?.title}
-                      objectFit="cover"
+                      objectfit="cover"
                     />
                   )}
                   {data?.mobileLogo && isScrolling && (
@@ -98,7 +98,7 @@ export default function Header() {
                         data?.siteLogoWhite?.fields?.file?.details?.image?.width
                       }
                       alt={data?.siteLogoWhite?.fields?.title}
-                      objectFit="cover"
+                      objectfit="cover"
                     />
                   )}
                   {data?.siteLogo && isScrolling && (

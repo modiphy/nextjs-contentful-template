@@ -23,7 +23,7 @@ export default function Media({ media }) {
           src={`https:${media?.fields?.file?.url}`}
           height={media?.fields?.file?.details?.image?.height}
           width={media?.fields?.file?.details?.image?.width}
-          objectFit="cover"
+          objectfit="cover"
           placeholder="blur"
           blurDataURL={ogImage}
         />
