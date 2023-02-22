@@ -53,7 +53,7 @@ export default function Layout({ children, pageData, metaData }) {
 
       <Header />
       <main>{children}</main>
-      <Footer pageData={pageData} />
+      <Footer pageData={pageData} metaData={metaData} />
     </>
   );
 }
