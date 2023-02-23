@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { getHeaderData } from "../lib/api";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import NestedLink from "./NestedLink";
@@ -51,7 +51,7 @@ export default function Header() {
               {/* Mobile Site Logo */}
               <div className="xl:hidden">
                 {data?.mobileLogoWhite && !isScrolling && (
-                  <img
+                  <Image
                     className="h-6 w-auto "
                     src={`https:${data?.mobileLogoWhite?.fields?.file?.url}`}
                     height={
@@ -66,7 +66,7 @@ export default function Header() {
                   />
                 )}
                 {data?.mobileLogo && isScrolling && (
-                  <img
+                  <Image
                     className="h-6 w-auto "
                     src={`https:${data?.mobileLogo?.fields?.file?.url}`}
                     height={
@@ -83,7 +83,7 @@ export default function Header() {
               <div className="hidden xl:block">
                 {data?.siteLogoWhite && !isScrolling && (
                   <Image
-                    className="h-6 w-auto "
+                    className="h-10 w-auto "
                     src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
                     height={
                       data?.siteLogoWhite?.fields?.file?.details?.image?.height
@@ -97,7 +97,7 @@ export default function Header() {
                 )}
                 {data?.siteLogo && isScrolling && (
                   <Image
-                    className="h-6 w-auto "
+                    className="h-10 w-auto "
                     src={`https:${data?.siteLogo?.fields?.file?.url}`}
                     height={
                       data?.siteLogo?.fields?.file?.details?.image?.height
@@ -239,8 +239,8 @@ export default function Header() {
                       <span className="flex">
                         <span className="sr-only">Development</span>
                         <div className="min-h-8 w-auto">
-                          <img
-                            className="h-6 w-auto "
+                          <Image
+                            className="h-12 w-auto "
                             src={`https:${data?.mobileLogo?.fields?.file?.url}`}
                             height={
                               data?.mobileLogo?.fields?.file?.details?.image
