@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import ogImage from "../public/og-image.png";
 
 export default function Media({ media }) {
@@ -6,7 +6,7 @@ export default function Media({ media }) {
   if (/(video)/.test(media?.fields?.file?.contentType)) {
     return (
       <video
-        className="aspect-[16/9] w-full rounded bg-primary-500 shadow-lg"
+        className="aspect-[16/9] w-full bg-gray-500 shadow-lg"
         src={`https:${media.fields.file.url}`}
         autoPlay
         muted
@@ -18,22 +18,20 @@ export default function Media({ media }) {
   // If image data exists, return image
   if (/(image)/.test(media?.fields?.file?.contentType)) {
     return (
-      <div className="relative overflow-hidden rounded-sm bg-primary-500 text-[0] shadow-lg">
-        <Image
-          src={`https:${media?.fields?.file?.url}`}
-          height={media?.fields?.file?.details?.image?.height}
-          width={media?.fields?.file?.details?.image?.width}
-          objectfit="cover"
-          placeholder="blur"
-          blurDataURL={ogImage}
-        />
-      </div>
+      <Image
+        className="relative overflow-hidden bg-gray-500 text-[0] shadow-lg"
+        src={`https:${media?.fields?.file?.url}`}
+        height={media?.fields?.file?.details?.image?.height}
+        width={media?.fields?.file?.details?.image?.width}
+        objectfit="cover"
+        alt=""
+      />
     );
   }
 
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm bg-primary-500 shadow-lg">
-      <Image src={ogImage} layout="fill" />
+    <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-500 shadow-lg">
+      <Image src={ogImage} alt="" fill />
     </div>
   );
 }
