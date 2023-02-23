@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getMetaData } from "../lib/api";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { InteriorHero } from "@/components/section-types";
 
 export default function PrivacyPolicy({
@@ -43,34 +43,19 @@ export default function PrivacyPolicy({
           <ul className="flex flex-col gap-2 self-start text-gray-700">
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>First and Last Name</div>
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>E-mail Address</div>
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>Phone Number</div>
             </li>
@@ -167,12 +152,7 @@ export default function PrivacyPolicy({
           <ul className="flex flex-col gap-2 self-start text-gray-700">
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>SSL Protocol</div>
             </li>
@@ -208,12 +188,7 @@ export default function PrivacyPolicy({
           <ul className="flex flex-col gap-2 self-start text-gray-700">
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>Delete your personal information from our records; and</div>
             </li>
@@ -241,12 +216,7 @@ export default function PrivacyPolicy({
           <ul className="flex flex-col gap-2 self-start text-gray-700">
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Complete the transaction for which the personal information was
@@ -259,12 +229,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Detect security incidents, protect against malicious, deceptive,
@@ -274,12 +239,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Debug to identify and repair errors that impair existing
@@ -288,12 +248,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Exercise free speech, ensure the right of another consumer to
@@ -303,12 +258,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Comply with the California Electronic Communications Privacy
@@ -317,12 +267,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Engage in public or peer-reviewed scientific, historical, or
@@ -335,12 +280,7 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Enable solely internal uses that are reasonably aligned with
@@ -349,23 +289,13 @@ export default function PrivacyPolicy({
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>Comply with an existing legal obligation; or</div>
             </li>
             <li className="flex max-w-prose justify-start gap-4">
               <div className="min-w-[1rem]">
-                <Image
-                  aria-hidden
-                  src="/favicon-16x16.png"
-                  height={10}
-                  width={10}
-                />
+                <Image alt="" src="/favicon-16x16.png" height={10} width={10} />
               </div>{" "}
               <div>
                 Otherwise use your personal information, internally, in a lawful
