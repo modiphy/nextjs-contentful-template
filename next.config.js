@@ -4,6 +4,12 @@ const nextConfig = {
   images: {
     domains: ["images.ctfassets.net"],
   },
+
+  // Set language of the site for accessibility
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = nextConfig;
