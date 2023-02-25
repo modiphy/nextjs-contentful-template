@@ -44,13 +44,13 @@ export default function CustomHead({ metaData, pageData }) {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
 
-      <meta property="og:image" content="/og-image.png" />
-      <meta property="og:locale" content="en_US"></meta>
-      <meta property="og:type" content="website"></meta>
-      <meta property="og:title" content={pageTitle}></meta>
-      <meta property="og:description" content={metaData?.description}></meta>
-      <meta property="og:url" content={metaData?.url}></meta>
-      <meta property="og:site_name" content={metaData?.siteName}></meta>
+      <meta content="/og-image.png" property="og:image" />
+      <meta content="en_US" property="og:locale"></meta>
+      <meta content="website" property="og:type"></meta>
+      <meta content={pageTitle()} property="og:title"></meta>
+      <meta content={metaData?.description} property="og:description"></meta>
+      <meta content={metaData?.url} property="og:url"></meta>
+      <meta content={metaData?.siteName} property="og:site_name"></meta>
     </Head>
   );
 }
