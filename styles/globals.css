@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* So that the footer sticks to the bottom when page is shorter than screen */
+#__next {
+  min-height: 100vh;
+  display: grid;
+}
