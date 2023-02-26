@@ -114,7 +114,7 @@ export default function Header() {
             {/* Nav links */}
             {data && (
               <nav className="mt-2 hidden space-x-8 xl:flex">
-                {data?.navigationLinks.map((navLink) => {
+                {data?.navigationLinks?.map((navLink) => {
                   return navLink?.fields?.childPages ? (
                     <NestedLink
                       navLink={navLink}
