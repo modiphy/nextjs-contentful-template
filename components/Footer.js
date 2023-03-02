@@ -142,7 +142,7 @@ const ModiphyBannerFooter = ({ metaData }) => {
             href="https://www.modiphy.com/"
             target="_blank"
             rel="noreferrer noopener"
-            title="MODIPHY® DESIGN | GridSource - HDD boring and drilling in Baton Rouge, Louisiana"
+            title={`MODIPHY® DESIGN | ${metaData?.defaultMetaTitle}`}
           >
             <svg
               className="h-6 w-6 fill-current"
