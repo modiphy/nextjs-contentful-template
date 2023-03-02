@@ -21,7 +21,10 @@ export default function CustomHead({ metaData, pageData }) {
       {metaData?.description && (
         <meta name="description" content={metaData?.description} />
       )}
-      <link rel="canonical" href={`/${canonicalUrl()}`} />
+      <link
+        rel="canonical"
+        href={`https://${metaData?.cleanUrl}/${canonicalUrl()}`}
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
