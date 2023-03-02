@@ -51,3 +51,31 @@ export default function ThankYou({ defaultMetaTitle }) {
     </>
   );
 }
+
+export async function getStaticProps() {
+  const metaData = await getMetaData();
+
+  const pageData = {
+    fields: {
+      title: "Thank You",
+      slug: "thank-you",
+    },
+  };
+
+  const defaultMetaTitle = metaData?.title ? metaData?.title : "";
+
+  const websiteUrl = metaData?.cleanUrl ? metaData?.cleanUrl : "";
+
+  const orgLegal = metaData?.organizationLegal
+    ? metaData?.organizationLegal
+    : "";
+
+  return {
+    props: {
+      pageData,
+      defaultMetaTitle,
+      websiteUrl,
+      orgLegal,
+    },
+  };
+}
