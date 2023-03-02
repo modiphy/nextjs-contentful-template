@@ -47,7 +47,10 @@ export default function CustomHead({ metaData, pageData }) {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
 
-      <meta content="/og-image.png" property="og:image" />
+      <meta
+        content={`https://${metaData?.cleanUrl}/og-image.png`}
+        property="og:image"
+      />
       <meta content="en_US" property="og:locale"></meta>
       <meta content="website" property="og:type"></meta>
       <meta content={pageTitle()} property="og:title"></meta>
