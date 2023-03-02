@@ -403,6 +403,13 @@ export default function PrivacyPolicy({
 export async function getStaticProps() {
   const metaData = await getMetaData();
 
+  const pageData = {
+    fields: {
+      title: "Privacy Policy",
+      slug: "privacy-policy",
+    },
+  };
+
   const defaultMetaTitle = metaData?.title ? metaData?.title : "";
 
   const websiteUrl = metaData?.cleanUrl ? metaData?.cleanUrl : "";
@@ -419,6 +426,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      pageData,
       defaultMetaTitle,
       websiteUrl,
       orgLegal,
