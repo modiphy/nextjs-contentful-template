@@ -168,24 +168,21 @@ export default function Header() {
                         }}
                         key={callToActionButton?.fields?.number}
                         href={href}
+                        className={`button inline-flex rounded-md border-2 border-transparent py-2 px-6 text-white shadow-none ${
+                          isScrolling && "lg:text-black"
+                        }`}
                       >
-                        <a
-                          className={`button inline-flex rounded-md border-2 border-transparent py-2 px-6 text-white shadow-none ${
-                            isScrolling && "lg:text-black"
-                          }`}
+                        {/* Telephone icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512"
+                          height="16"
+                          width="16"
+                          className="mr-2 fill-primary-400"
                         >
-                          {/* Telephone icon */}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            height="16"
-                            width="16"
-                            className="mr-2 fill-primary-400"
-                          >
-                            <path d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z" />
-                          </svg>
-                          {callToActionButton?.fields?.number}
-                        </a>
+                          <path d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z" />
+                        </svg>
+                        {callToActionButton?.fields?.number}
                       </MyLink>
                     );
                   }
@@ -303,12 +300,11 @@ export default function Header() {
                                   href={`/${childPage?.fields?.slug}`}
                                   target="_self"
                                   key={childPage?.fields?.slug}
+                                  className="flex items-center rounded-lg py-1 text-gray-900 hover:bg-gray-50"
                                 >
-                                  <a className="flex items-center rounded-lg py-1 text-gray-900 hover:bg-gray-50">
-                                    <div className="text-theme-title text-base font-medium">
-                                      {childPage?.fields?.title}
-                                    </div>
-                                  </a>
+                                  <div className="text-theme-title text-base font-medium">
+                                    {childPage?.fields?.title}
+                                  </div>
                                 </MyLink>
                               )
                             )}
@@ -332,10 +328,9 @@ export default function Header() {
                             href={`/${navigationLink?.fields?.slug}`}
                             key={`${navigationLink?.fields?.slug}`}
                             target="_self"
+                            className="text-base font-medium text-gray-900 hover:text-gray-700"
                           >
-                            <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                              {navigationLink?.fields?.title}
-                            </a>
+                            {navigationLink?.fields?.title}
                           </MyLink>
                         );
                       }
@@ -354,10 +349,9 @@ export default function Header() {
                             }}
                             href={`/${ctaBtn?.fields?.page?.fields?.slug}`}
                             key={ctaBtn?.fields?.text}
+                            className="button flex w-full bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
                           >
-                            <a className="button flex w-full bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500">
-                              {ctaBtn?.fields?.text}
-                            </a>
+                            {ctaBtn?.fields?.text}
                           </MyLink>
                         );
                       }
