@@ -227,6 +227,13 @@ export default function Home({ defaultMetaTitle, websiteUrl, dateString }) {
 export async function getStaticProps() {
   const metaData = await getMetaData();
 
+  const pageData = {
+    fields: {
+      title: "Cookie Policy",
+      slug: "cookie-policy",
+    },
+  };
+
   const defaultMetaTitle = metaData?.title ? metaData?.title : "";
 
   const websiteUrl = metaData?.cleanUrl ? metaData?.cleanUrl : "";
@@ -239,6 +246,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      pageData,
       defaultMetaTitle,
       websiteUrl,
       dateString,
