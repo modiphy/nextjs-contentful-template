@@ -17,14 +17,12 @@ export default function Error() {
             </h2>
 
             <div className="prose-bg-primary-lighter prose mx-auto mt-6 md:prose-lg">
-              This page has no sections. Create some{" "}
+              We're sorry, this page doesn't exist. You can{" "}
               <Link
-                href="https://app.contentful.com/spaces/wad6hnejkmsy/entries?id=v39anGlN192MZmXk&contentTypeId=page&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author&page=0"
-                target="_blank"
-                rel="noreferrer"
+                href="/"
                 className="text-theme-title-primary font-bold text-primary-600 underline"
               >
-                sections in contentful
+                explore the rest of our site.
               </Link>
               .
             </div>
