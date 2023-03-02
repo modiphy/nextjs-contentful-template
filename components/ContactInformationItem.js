@@ -31,7 +31,6 @@ const options = {
     [INLINES.HYPERLINK]: (node, children) => {
       return (
         <span className="text-theme-body mt-1 text-base leading-tight">
-          <span className="sr-only">Address</span>
           <Link
             href={node?.data?.uri}
             target="_blank"
