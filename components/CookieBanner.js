@@ -28,14 +28,14 @@ export default function CookieBanner() {
             href="/cookie-policy"
             rel="noreferrer"
             target="_blank"
-            className="text-red-700 hover:text-red-800 group inline-flex items-center justify-center text-sm underline md:text-base"
+            className="text-primary-700 hover:text-primary-800 group inline-flex items-center justify-center text-sm underline md:text-base"
           >
             {" "}
             View Cookie Policy
           </Link>
           <button
             onClick={() => hideCookie()}
-            className="button mt-4 w-full inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
+            className="button rounded-sm mt-4 w-full inline-flex bg-primary-600 text-white hover:bg-primary-700 hover:text-white focus:ring-primary-700"
           >
             Got it!
           </button>
