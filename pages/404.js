@@ -17,7 +17,7 @@ export default function Error() {
             </h2>
 
             <div className="prose-bg-primary-lighter prose mx-auto mt-6 md:prose-lg">
-              We're sorry, this page doesn't exist. You can{" "}
+              We&apos;re sorry, this page doesn&apos;t exist. You can{" "}
               <Link
                 href="/"
                 className="text-theme-title-primary font-bold text-primary-600 underline"
