@@ -23,20 +23,6 @@ export default function Section({ data, marginBottom, marginTop }) {
 
   const options = {
     renderNode: {
-      [BLOCKS.LIST_ITEM]: (node, children) => (
-        <li className="flex gap-2">
-          <Image
-            alt="List item graphic"
-            src="/shape-1.svg"
-            height={10}
-            width={10}
-          />{" "}
-          {children}
-        </li>
-      ),
-      [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className="mb-4 flex flex-col gap-2">{children}</ul>
-      ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <p className="prose mx-auto mt-6 xl:prose-lg">{children}</p>
       ),
