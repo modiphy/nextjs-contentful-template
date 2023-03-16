@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { InteriorHero } from "@/components/section-types";
+import { getMetaData } from "@/lib/api";
 
 export default function ThankYou({ defaultMetaTitle }) {
   return (
