@@ -3,6 +3,7 @@ import { getMetaData } from "../lib/api";
 import Link from "next/link";
 import Image from "next/image";
 import { InteriorHero } from "@/components/section-types";
+import { getHeaderData } from "../lib/api";
 
 export default function PrivacyPolicy({
   defaultMetaTitle,
@@ -424,6 +425,8 @@ export async function getStaticProps() {
   const year = date.getFullYear();
   const dateString = `${month} ${day}, ${year}`;
 
+  const headerData = await getHeaderData();
+
   return {
     props: {
       pageData,
@@ -431,6 +434,7 @@ export async function getStaticProps() {
       websiteUrl,
       orgLegal,
       dateString,
+      headerData,
     },
   };
 }

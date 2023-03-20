@@ -1,5 +1,5 @@
 import Section from "../components/Section";
-import { getMetaData, getPageData, getParentUrl } from "../lib/api";
+import { getMetaData, getPageData, getHeaderData } from "../lib/api";
 import { useEffect } from "react";
 import Link from "next/link";
 
@@ -53,10 +53,13 @@ export async function getStaticProps() {
   // used in the page layout
   const metaData = await getMetaData();
 
+  const headerData = await getHeaderData();
+
   return {
     props: {
       pageData,
       metaData,
+      headerData,
     },
   };
 }

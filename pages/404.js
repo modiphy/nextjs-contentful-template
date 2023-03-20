@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getHeaderData } from "@/lib/api";
 
 export default function Error() {
   return (
@@ -31,4 +32,14 @@ export default function Error() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const headerData = await getHeaderData();
+
+  return {
+    props: {
+      headerData,
+    },
+  };
 }

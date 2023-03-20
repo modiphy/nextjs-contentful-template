@@ -18,13 +18,7 @@ const MyLink = forwardRef((props, ref) => {
 
 MyLink.displayName = "MyLink";
 
-export default function Header() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    getHeaderData().then((res) => setData(res));
-  }, []);
-
+export default function Header({ data }) {
   const [isScrolling, setScrolling] = useState(false);
 
   useEffect(() => {

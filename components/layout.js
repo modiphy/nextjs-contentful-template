@@ -6,7 +6,7 @@ import Script from "next/script";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function Layout({ children, pageData, metaData }) {
+export default function Layout({ children, pageData, metaData, headerData }) {
   useEffect(() => {
     console.log(children);
   });
@@ -51,7 +51,7 @@ export default function Layout({ children, pageData, metaData }) {
 
       <CookieBanner />
 
-      <Header />
+      <Header data={headerData} />
       <main>{children}</main>
       <Footer pageData={pageData} metaData={metaData} />
     </>

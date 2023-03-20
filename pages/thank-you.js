@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { getMetaData } from "@/lib/api";
+import { getMetaData, getHeaderData } from "@/lib/api";
 
 export default function ThankYou({ defaultMetaTitle }) {
   return (
@@ -70,12 +70,15 @@ export async function getStaticProps() {
     ? metaData?.organizationLegal
     : "";
 
+  const headerData = await getHeaderData();
+
   return {
     props: {
       pageData,
       defaultMetaTitle,
       websiteUrl,
       orgLegal,
+      headerData,
     },
   };
 }
