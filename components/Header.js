@@ -1,3 +1,5 @@
+"use client";
+
 import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { getHeaderData } from "../lib/api";
