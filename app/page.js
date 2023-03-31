@@ -1,11 +1,9 @@
-import { getPageData, getPagePaths } from "@/lib/api";
-import Section from "@/components/Section";
+import { getPageData } from "@/lib/api";
 import Link from "next/link";
+import Section from "@/components/Section";
 
 export default async function Page() {
   const pageData = await getPageData("home");
-
-  const pagePaths = await getPagePaths();
 
   const { sections } = pageData?.fields;
 
@@ -13,13 +11,7 @@ export default async function Page() {
     <>
       {sections ? (
         sections.map((pageSection) => {
-          return (
-            <Section
-              data={pageSection}
-              key={pageSection.fields.title}
-              pagePaths={pagePaths}
-            />
-          );
+          return <Section data={pageSection} key={pageSection.fields.title} />;
         })
       ) : (
         // No sections disclaimer
