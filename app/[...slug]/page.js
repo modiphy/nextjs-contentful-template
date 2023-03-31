@@ -2,8 +2,14 @@ import { getPageData, getPagePaths } from "@/lib/api";
 import Section from "@/components/Section";
 import Link from "next/link";
 
-export default async function Page() {
-  const pageData = await getPageData("home");
+export async function generateStaticParams() {
+  const pagePaths = await getPagePaths();
+
+  return pagePaths;
+}
+
+export default async function Page({ params }) {
+  const pageData = await getPageData(params?.slug?.[params?.slug?.length - 1]);
 
   const pagePaths = await getPagePaths();
 
@@ -18,6 +24,7 @@ export default async function Page() {
               data={pageSection}
               key={pageSection.fields.title}
               pagePaths={pagePaths}
+              param={params}
             />
           );
         })
