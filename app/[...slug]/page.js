@@ -2,16 +2,16 @@ import { getPageData, getPagePaths } from "@/lib/api";
 import Section from "@/components/Section";
 import Link from "next/link";
 
-export async function generateStaticParams() {
-  const pagePaths = await getPagePaths();
+export async function generateMetadata({ params }) {
+  const pageData = await getPageData(params.slug[params.slug.length - 1]);
 
-  return pagePaths;
+  return {
+    title: pageData?.fields?.title,
+  };
 }
 
 export default async function Page({ params }) {
   const pageData = await getPageData(params?.slug?.[params?.slug?.length - 1]);
-
-  const pagePaths = await getPagePaths();
 
   const { sections } = pageData?.fields;
 
@@ -19,14 +19,7 @@ export default async function Page({ params }) {
     <>
       {sections ? (
         sections.map((pageSection) => {
-          return (
-            <Section
-              data={pageSection}
-              key={pageSection.fields.title}
-              pagePaths={pagePaths}
-              param={params}
-            />
-          );
+          return <Section data={pageSection} key={pageSection.fields.title} />;
         })
       ) : (
         // No sections disclaimer
@@ -57,4 +50,10 @@ export default async function Page({ params }) {
       )}
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const pagePaths = await getPagePaths();
+
+  return pagePaths;
 }
