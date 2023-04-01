@@ -245,7 +245,7 @@ const Logo = ({ data, metaData, isScrolling }) => {
           <div>
             {data?.siteLogoWhite && !isScrolling && (
               <Image
-                className="h-6 lg:h-10 w-auto "
+                className="h-6 drop-shadow-md lg:h-10 w-auto "
                 src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
                 height={
                   data?.siteLogoWhite?.fields?.file?.details?.image?.height
@@ -257,7 +257,7 @@ const Logo = ({ data, metaData, isScrolling }) => {
             )}
             {data?.siteLogo && isScrolling && (
               <Image
-                className="h-6 lg:h-10 w-auto "
+                className="h-6 drop-shadow-md lg:h-10 w-auto "
                 src={`https:${data?.siteLogo?.fields?.file?.url}`}
                 height={data?.siteLogo?.fields?.file?.details?.image?.height}
                 width={data?.siteLogo?.fields?.file?.details?.image?.width}
