@@ -11,7 +11,7 @@ export async function metadata({ params }) {
 
   return {
     title: {
-      default: metaData?.fields?.title,
+      default: metaData?.defaultMetaTitle,
       template: "%s | " + metaData?.defaultMetaTitle,
     },
   };
