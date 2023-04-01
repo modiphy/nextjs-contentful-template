@@ -45,29 +45,11 @@ export default function Header({ data, metaData }) {
 
           <div className="flex items-center justify-end">
             {/* Nav links */}
-            {data && (
-              <nav className="mt-2 hidden space-x-8 xl:flex">
-                {data?.navigationLinks?.map((navLink) => {
-                  return navLink?.fields?.childPages ? (
-                    <NestedLink
-                      navLink={navLink}
-                      isScrolling={isScrolling}
-                      key={navLink?.fields?.title}
-                    />
-                  ) : (
-                    <Link
-                      href={`/${navLink?.fields?.slug}`}
-                      key={navLink?.fields?.title}
-                      className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
-                        isScrolling && "text-black hover:text-gray-600"
-                      }`}
-                    >
-                      {navLink?.fields?.title}
-                    </Link>
-                  );
-                })}
-              </nav>
-            )}
+            <NavLinks
+              navigationLinks={data?.navigationLinks}
+              isScrolling={isScrolling}
+            />
+            
             {/* Call to Action Buttons */}
             <div className="mr-8 ml-auto hidden flex-1 justify-end space-x-4 whitespace-nowrap md:flex xl:mr-0 xl:ml-8">
               {data?.callToAction &&
@@ -332,6 +314,34 @@ const Logo = ({ data, metaData, isScrolling }) => {
           </div>
         </Link>
       </div>
+    )
+  );
+};
+
+const NavLinks = ({ navigationLinks, isScrolling }) => {
+  return (
+    navigationLinks && (
+      <nav className="mt-2 hidden space-x-8 xl:flex">
+        {navigationLinks?.map((navLink) => {
+          return navLink?.fields?.childPages ? (
+            <NestedLink
+              navLink={navLink}
+              isScrolling={isScrolling}
+              key={navLink?.fields?.title}
+            />
+          ) : (
+            <Link
+              href={`/${navLink?.fields?.slug}`}
+              key={navLink?.fields?.title}
+              className={`block font-medium uppercase tracking-wider text-primary-100 hover:text-white hover:underline ${
+                isScrolling && "text-black hover:text-gray-600"
+              }`}
+            >
+              {navLink?.fields?.title}
+            </Link>
+          );
+        })}
+      </nav>
     )
   );
 };
