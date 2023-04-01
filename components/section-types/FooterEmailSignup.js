@@ -4,7 +4,7 @@ export default function FooterEmailSignup({ title }) {
   return (
     <section className="relative bg-gray-900">
       <div className="container relative z-1 max-w-screen-xl py-8 text-left">
-        <div className="rounded-sm border-4 border-primary-600 px-6 py-6 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
+        <div className="rounded-sm border-4 border-primary-600 px-6 py-6 md:px-12 md:py-12 lg:px-16 lg:py-16 xl:flex xl:items-center">
           <div className="xl:-mt-2 xl:w-0 xl:flex-1">
             {title && (
               <h2 className="font-heading text-2xl font-semibold text-white md:text-4xl">
@@ -12,7 +12,7 @@ export default function FooterEmailSignup({ title }) {
               </h2>
             )}
           </div>
-          <div className="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
+          <div className="mt-8 sm:w-full sm:max-w-md xl:ml-8 xl:mt-0">
             <form
               name="form1294"
               className="wufoo sm:flex"
@@ -40,7 +40,7 @@ export default function FooterEmailSignup({ title }) {
                 id="saveForm"
                 name="saveForm"
                 type="submit"
-                className="button mt-3 flex w-full border-transparent bg-primary-600 text-white hover:border-transparent hover:bg-primary-700 hover:text-white focus:ring-white focus:ring-offset-primary-600 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
+                className="button mt-3 flex w-full border-transparent bg-primary-600 text-white hover:border-transparent hover:bg-primary-700 hover:text-white focus:ring-white focus:ring-offset-primary-600 sm:ml-3 sm:mt-0 sm:w-auto sm:flex-shrink-0"
               >
                 Subscribe
               </button>

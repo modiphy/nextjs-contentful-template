@@ -14,14 +14,14 @@ export default function InteriorHero({ title }) {
       <div className="container relative z-10 mx-auto max-w-screen-2xl px-8 pb-16 pt-24 md:pb-24 md:pt-32 lg:pb-40">
         <div className="flex justify-center lg:mt-8">
           {title && (
-            <h1 className="max-w-xl text-center font-heading text-4xl tracking-wide font-extrabold uppercase text-white md:text-4xl lg:text-7xl">
+            <h1 className="max-w-xl text-center font-heading text-4xl font-extrabold uppercase tracking-wide text-white md:text-4xl lg:text-7xl">
               {title}
             </h1>
           )}
         </div>
       </div>
 
-      <div className="absolute left-0 right-0 -bottom-px">
+      <div className="absolute -bottom-px left-0 right-0">
         <svg
           className="relative -top-px fill-current text-white"
           viewBox="0 0 1000 50"

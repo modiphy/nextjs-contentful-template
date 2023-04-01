@@ -23,7 +23,7 @@ export default async function Page({ params }) {
         })
       ) : (
         // No sections disclaimer
-        <section className="py-12 pb-40 md:py-16 lg:py-24 xl:py-32 2xl:pt-36 2xl:pb-40">
+        <section className="py-12 pb-40 md:py-16 lg:py-24 xl:py-32 2xl:pb-40 2xl:pt-36">
           <div className="md:h-22 h-20 lg:h-24 xl:h-28"></div>
           <div className="container max-w-screen-xl text-center">
             <div className="">

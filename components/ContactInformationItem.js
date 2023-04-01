@@ -19,7 +19,7 @@ const options = {
       return (
         <Link
           href={`/${node?.data?.target?.fields?.page?.fields?.slug}`}
-          className="button inline-flex w-full justify-center rounded-md border-2 border-transparent bg-primary-600 py-2 px-6 text-white hover:bg-primary-500 focus:ring-primary-500"
+          className="button inline-flex w-full justify-center rounded-md border-2 border-transparent bg-primary-600 px-6 py-2 text-white hover:bg-primary-500 focus:ring-primary-500"
         >
           {node?.data?.target?.fields?.text}
         </Link>

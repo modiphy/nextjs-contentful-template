@@ -8,7 +8,7 @@ export default async function Footer() {
   const metaData = await getMetaData();
 
   return (
-    <footer className="bg-gray-900 mt-auto pt-12 pb-24">
+    <footer className="mt-auto bg-gray-900 pb-24 pt-12">
       <div className="container max-w-screen-lg space-y-14 text-center lg:text-left">
         <FooterInformation footerInformation={data?.footerInformation} />
 
@@ -77,7 +77,7 @@ const FooterNavigation = ({ footerNavigation }) => {
                   <Link
                     href={`${footerNavItem?.fields?.slug}`}
                     target="_self"
-                    className="hover:text-white text-gray-200"
+                    className="text-gray-200 hover:text-white"
                   >
                     {footerNavItem?.fields?.title}
                   </Link>

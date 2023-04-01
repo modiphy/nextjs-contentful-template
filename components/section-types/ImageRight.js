@@ -12,7 +12,7 @@ export default function ImageRight({
 }) {
   return (
     <section className="relative bg-transparent" id={id}>
-      <div className="container relative z-1 max-w-screen-xl pt-12 pb-12 md:pt-12 md:pb-12 lg:pt-16 lg:pb-16 xl:pt-20 xl:pb-20">
+      <div className="container relative z-1 max-w-screen-xl pb-12 pt-12 md:pb-12 md:pt-12 lg:pb-16 lg:pt-16 xl:pb-20 xl:pt-20">
         <div className="mt-6 grid justify-center gap-10 md:mt-8 lg:mt-6 lg:grid-cols-2 xl:gap-x-12">
           <div className="relative w-full max-w-2xl lg:max-w-none">
             <div className="relative">

@@ -44,7 +44,7 @@ export default function HeroContactForm({
         </h3>
       ),
       [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-y-3 gap-x-3 md:mt-10 lg:mx-0 lg:gap-y-2 xl:gap-y-4">
+        <ul className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-x-3 gap-y-3 md:mt-10 lg:mx-0 lg:gap-y-2 xl:gap-y-4">
           {children}
         </ul>
       ),
@@ -181,7 +181,7 @@ export default function HeroContactForm({
         </div>
       </div>
 
-      <div className="absolute left-0 right-0 -bottom-px">
+      <div className="absolute -bottom-px left-0 right-0">
         <svg
           className="relative -top-px fill-current text-gray-900"
           viewBox="0 0 1000 50"

@@ -58,7 +58,7 @@ export default function NestedLink({ navLink, isScrolling }) {
           >
             <div className="relative overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900 ring-opacity-15">
               <span
-                className="is-block absolute left-1/2 -top-2 -ml-3"
+                className="is-block absolute -top-2 left-1/2 -ml-3"
                 aria-hidden="true"
               >
                 <svg
@@ -75,7 +75,7 @@ export default function NestedLink({ navLink, isScrolling }) {
                     <Link
                       href={`/${navLinkButton?.fields?.slug}`}
                       key={`/${navLinkButton?.fields?.slug}`}
-                      className="group/child-nav flex items-center border-b border-gray-200 border-opacity-50 px-5 pt-6 pb-4 hover:bg-gray-50"
+                      className="group/child-nav flex items-center border-b border-gray-200 border-opacity-50 px-5 pb-4 pt-6 hover:bg-gray-50"
                     >
                       <div className="ml-3 flex items-center gap-3 transition-all">
                         <svg
