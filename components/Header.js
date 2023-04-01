@@ -20,7 +20,7 @@ const MyLink = forwardRef((props, ref) => {
 
 MyLink.displayName = "MyLink";
 
-export default function Header({ data }) {
+export default function Header({ data, metaData }) {
   const [isScrolling, setScrolling] = useState(false);
 
   useEffect(() => {

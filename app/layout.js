@@ -20,11 +20,12 @@ export async function metadata({ params }) {
 export default async function RootLayout({ children }) {
   const headerData = await getHeaderData();
   const footerData = await getFooterData();
+  const metadata = await getMetaData();
 
   return (
     <html lang="en">
       <body>
-        <Header data={headerData} />
+        <Header data={headerData} metaData={metadata} />
         <main>{children}</main>
         <Footer data={footerData} />
       </body>
