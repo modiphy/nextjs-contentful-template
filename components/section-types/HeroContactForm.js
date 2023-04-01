@@ -143,41 +143,41 @@ export default function HeroContactForm({
             )}
           </div>
 
-          {embedScript && embedElement && (
-            <div className="lg:col-span-6 lg:col-start-7 xl:col-span-5 xl:col-start-8">
-              <div className="relative mx-auto lg:mt-8 xl:mt-0">
-                <div className="relative">
-                  <div className="relative z-1 mx-auto w-full overflow-hidden rounded bg-white shadow-xl lg:mr-0">
-                    <div className="px-4 pt-6 sm:px-6">
-                      {embedHeading && (
-                        <p className="mb-3 text-center font-sans text-xl font-medium uppercase tracking-wide md:text-2xl">
-                          {embedHeading}
-                        </p>
-                      )}
-                      <div className="min-h-[384px]">
+          <div className="lg:col-span-6 lg:col-start-7 xl:col-span-5 xl:col-start-8">
+            <div className="relative mx-auto lg:mt-8 xl:mt-0">
+              <div className="relative">
+                <div className="relative z-1 mx-auto w-full overflow-hidden rounded bg-white shadow-xl lg:mr-0">
+                  <div className="px-4 pt-6 sm:px-6">
+                    {embedHeading && (
+                      <p className="mb-3 text-center font-sans text-xl font-medium uppercase tracking-wide md:text-2xl">
+                        {embedHeading}
+                      </p>
+                    )}
+                    <div className="min-h-[384px]">
+                      {embedScript && embedElement && (
                         <div
                           className="bg-white"
                           dangerouslySetInnerHTML={{ __html: embedElement }}
                         />
-                      </div>
+                      )}
                     </div>
-                    <div className="border-t-2 border-gray-200 bg-gray-50 px-4 py-6 text-center sm:px-10">
-                      <p className="text-xs leading-5 text-gray-500">
-                        {" "}
-                        We care about protecting your data. Read our{" "}
-                        <Link
-                          href="/privacy-policy"
-                          className="font-bold text-gray-700 hover:underline"
-                        >
-                          Privacy Policy.
-                        </Link>
-                      </p>
-                    </div>
+                  </div>
+                  <div className="border-t-2 border-gray-200 bg-gray-50 px-4 py-6 text-center sm:px-10">
+                    <p className="text-xs leading-5 text-gray-500">
+                      {" "}
+                      We care about protecting your data. Read our{" "}
+                      <Link
+                        href="/privacy-policy"
+                        className="font-bold text-gray-700 hover:underline"
+                      >
+                        Privacy Policy.
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
 
