@@ -41,70 +41,7 @@ export default function Header({ data, metaData }) {
     >
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
-          <div className="flex justify-start lg:flex-1">
-            <Link href="/" className="cursor-pointer">
-              <span className="sr-only">Your Company</span>
-              {/* Mobile Site Logo */}
-              <div className="xl:hidden">
-                {data?.mobileLogoWhite && !isScrolling && (
-                  <Image
-                    className="h-6 w-auto "
-                    src={`https:${data?.mobileLogoWhite?.fields?.file?.url}`}
-                    height={
-                      data?.mobileLogoWhite?.fields?.file?.details?.image
-                        ?.height
-                    }
-                    width={
-                      data?.mobileLogoWhite?.fields?.file?.details?.image?.width
-                    }
-                    alt={data?.mobileLogoWhite?.fields?.title}
-                    objectfit="cover"
-                  />
-                )}
-                {data?.mobileLogo && isScrolling && (
-                  <Image
-                    className="h-6 w-auto "
-                    src={`https:${data?.mobileLogo?.fields?.file?.url}`}
-                    height={
-                      data?.mobileLogo?.fields?.file?.details?.image?.height
-                    }
-                    width={
-                      data?.mobileLogo?.fields?.file?.details?.image?.width
-                    }
-                    alt={data?.mobileLogo?.fields?.title}
-                  />
-                )}
-              </div>
-              {/* Site Logo */}
-              <div className="hidden xl:block">
-                {data?.siteLogoWhite && !isScrolling && (
-                  <Image
-                    className="h-10 w-auto "
-                    src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
-                    height={
-                      data?.siteLogoWhite?.fields?.file?.details?.image?.height
-                    }
-                    width={
-                      data?.siteLogoWhite?.fields?.file?.details?.image?.width
-                    }
-                    alt={data?.siteLogoWhite?.fields?.title}
-                    objectfit="cover"
-                  />
-                )}
-                {data?.siteLogo && isScrolling && (
-                  <Image
-                    className="h-10 w-auto "
-                    src={`https:${data?.siteLogo?.fields?.file?.url}`}
-                    height={
-                      data?.siteLogo?.fields?.file?.details?.image?.height
-                    }
-                    width={data?.siteLogo?.fields?.file?.details?.image?.width}
-                    alt={data?.siteLogo?.fields?.title}
-                  />
-                )}
-              </div>
-            </Link>
-          </div>
+          <Logo data={data} metaData={metaData} isScrolling={isScrolling} />
 
           <div className="flex items-center justify-end">
             {/* Nav links */}
@@ -362,3 +299,39 @@ export default function Header({ data, metaData }) {
     </Popover>
   );
 }
+
+const Logo = ({ data, metaData, isScrolling }) => {
+  return (
+    data && (
+      <div className="flex justify-start lg:flex-1">
+        <Link href="/" className="cursor-pointer">
+          <span className="sr-only">{metaData?.organizationName}</span>
+          {/* Site Logo */}
+          <div className="hidden xl:block">
+            {data?.siteLogoWhite && !isScrolling && (
+              <Image
+                className="h-10 w-auto "
+                src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
+                height={
+                  data?.siteLogoWhite?.fields?.file?.details?.image?.height
+                }
+                width={data?.siteLogoWhite?.fields?.file?.details?.image?.width}
+                alt={metaData?.organizationName}
+                objectfit="cover"
+              />
+            )}
+            {data?.siteLogo && isScrolling && (
+              <Image
+                className="h-10 w-auto "
+                src={`https:${data?.siteLogo?.fields?.file?.url}`}
+                height={data?.siteLogo?.fields?.file?.details?.image?.height}
+                width={data?.siteLogo?.fields?.file?.details?.image?.width}
+                alt={metaData?.organizationName}
+              />
+            )}
+          </div>
+        </Link>
+      </div>
+    )
+  );
+};
