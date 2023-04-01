@@ -35,7 +35,7 @@ export default function Header({ data, metaData }) {
 
   return (
     <Popover
-      className={`absolute top-0 left-0 z-20 w-full bg-transparent lg:fixed ${
+      className={`absolute left-0 top-0 z-20 w-full bg-transparent lg:fixed ${
         isScrolling && "lg:bg-white lg:shadow-md"
       }`}
     >
@@ -97,7 +97,7 @@ export default function Header({ data, metaData }) {
         >
           {({ close }) => (
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="px-5 pt-5 pb-6">
+              <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <MobileMenuLogo logo={data?.siteLogo} metaData={metaData} />
 
@@ -147,14 +147,14 @@ export default function Header({ data, metaData }) {
 const Logo = ({ data, metaData, isScrolling }) => {
   return (
     data && (
-      <div className="flex justify-start flex-1">
+      <div className="flex flex-1 justify-start">
         <Link href="/" className="cursor-pointer">
           <span className="sr-only">{metaData?.organizationName}</span>
           {/* Site Logo */}
           <div>
             {data?.siteLogoWhite && !isScrolling && (
               <Image
-                className="h-6 drop-shadow-md lg:h-10 w-auto "
+                className="h-6 w-auto drop-shadow-md lg:h-10 "
                 src={`https:${data?.siteLogoWhite?.fields?.file?.url}`}
                 height={
                   data?.siteLogoWhite?.fields?.file?.details?.image?.height
@@ -166,7 +166,7 @@ const Logo = ({ data, metaData, isScrolling }) => {
             )}
             {data?.siteLogo && isScrolling && (
               <Image
-                className="h-6 drop-shadow-md lg:h-10 w-auto "
+                className="h-6 w-auto drop-shadow-md lg:h-10 "
                 src={`https:${data?.siteLogo?.fields?.file?.url}`}
                 height={data?.siteLogo?.fields?.file?.details?.image?.height}
                 width={data?.siteLogo?.fields?.file?.details?.image?.width}
@@ -210,7 +210,7 @@ const NavLinks = ({ navigationLinks, isScrolling }) => {
 
 const CallToActionButtons = ({ callToAction, isScrolling }) => {
   return (
-    <div className="mr-8 ml-auto hidden flex-1 justify-end space-x-4 whitespace-nowrap md:flex xl:mr-0 xl:ml-8">
+    <div className="ml-auto mr-8 hidden flex-1 justify-end space-x-4 whitespace-nowrap md:flex xl:ml-8 xl:mr-0">
       {callToAction &&
         callToAction?.map((callToActionButton) => {
           const contentType = callToActionButton?.sys?.contentType?.sys?.id;
@@ -241,7 +241,7 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
                 }}
                 key={callToActionButton?.fields?.number}
                 href={href}
-                className={`button inline-flex rounded-md border-2 border-transparent py-2 px-6 text-white shadow-none ${
+                className={`button inline-flex rounded-md border-2 border-transparent px-6 py-2 text-white shadow-none ${
                   isScrolling && "lg:text-black"
                 }`}
               >
@@ -267,7 +267,7 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
 const MobileMenuLogo = ({ logo, metaData }) => {
   return (
     logo && (
-      <div>
+      <Link href="/">
         <span className="flex">
           <span className="sr-only">{metaData?.organizationName}</span>
           <div className="min-h-6 w-auto">
@@ -280,7 +280,7 @@ const MobileMenuLogo = ({ logo, metaData }) => {
             />
           </div>
         </span>
-      </div>
+      </Link>
     )
   );
 };
@@ -322,7 +322,7 @@ const MobileMenuLinksNested = ({ navigationLinks }) => {
 const MobileMenuLinks = ({ navigationLinks }) => {
   return (
     navigationLinks && (
-      <div className="grid text-center gap-4">
+      <div className="grid gap-4 text-center">
         {navigationLinks?.map((navigationLink) => {
           if (!navigationLink?.fields?.childPages) {
             return (
