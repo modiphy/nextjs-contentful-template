@@ -21,7 +21,7 @@ const MyLink = forwardRef((props, ref) => {
 MyLink.displayName = "MyLink";
 
 export default function Header({ data, metaData }) {
-  const [isScrolling, setScrolling] = useState(false);
+  const [isScrolling, setScrolling] = useState(window.scrollY >= 10);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
