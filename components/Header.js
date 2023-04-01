@@ -99,28 +99,7 @@ export default function Header({ data, metaData }) {
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
-                  {data?.mobileLogo && (
-                    <div>
-                      <span className="flex">
-                        <span className="sr-only">Development</span>
-                        <div className="min-h-8 w-auto">
-                          <Image
-                            className="h-12 w-auto "
-                            src={`https:${data?.mobileLogo?.fields?.file?.url}`}
-                            height={
-                              data?.mobileLogo?.fields?.file?.details?.image
-                                ?.height
-                            }
-                            width={
-                              data?.mobileLogo?.fields?.file?.details?.image
-                                ?.width
-                            }
-                            alt={data?.mobileLogo?.fields?.title}
-                          />
-                        </div>
-                      </span>
-                    </div>
-                  )}
+                  <MobileMenuLogo logo={data?.siteLogo} metaData={metaData} />
 
                   <div className="-mr-2">
                     <Popover.Button
@@ -352,5 +331,26 @@ const CallToActionButtons = ({ callToAction, isScrolling }) => {
           }
         })}
     </div>
+  );
+};
+
+const MobileMenuLogo = ({ logo, metaData }) => {
+  return (
+    logo && (
+      <div>
+        <span className="flex">
+          <span className="sr-only">{metaData?.organizationName}</span>
+          <div className="min-h-6 w-auto">
+            <Image
+              className="h-6 w-auto"
+              src={`https:${logo?.fields?.file?.url}`}
+              height={logo?.fields?.file?.details?.image?.height}
+              width={logo?.fields?.file?.details?.image?.width}
+              alt={logo?.fields?.title}
+            />
+          </div>
+        </span>
+      </div>
+    )
   );
 };
