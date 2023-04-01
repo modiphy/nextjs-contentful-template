@@ -126,64 +126,13 @@ export default function Header({ data, metaData }) {
                   </div>
                 </div>
 
-                {data &&
-                  data?.navigationLinks?.map((navigationLink) => {
-                    if (navigationLink?.fields?.childPages) {
-                      return (
-                        <div
-                          className="mt-6"
-                          key={navigationLink?.fields?.title}
-                        >
-                          <p className="font-bold uppercase tracking-wide text-gray-500">
-                            {navigationLink?.fields?.title}
-                          </p>
-                          <nav className="mt-1 grid grid-cols-1 gap-2">
-                            {navigationLink?.fields?.childPages?.map(
-                              (childPage) => (
-                                <MyLink
-                                  onClick={() => {
-                                    close();
-                                  }}
-                                  href={`/${childPage?.fields?.slug}`}
-                                  target="_self"
-                                  key={childPage?.fields?.slug}
-                                  className="flex items-center rounded-lg py-1 text-gray-900 hover:bg-gray-50"
-                                >
-                                  <div className="text-theme-title text-base font-medium">
-                                    {childPage?.fields?.title}
-                                  </div>
-                                </MyLink>
-                              )
-                            )}
-                          </nav>
-                        </div>
-                      );
-                    }
-                  })}
+                <MobileMenuLinksNested
+                  navigationLinks={data?.navigationLinks}
+                />
               </div>
 
               <div className="px-5 py-6">
-                {data?.navigationLinks && (
-                  <div className="grid text-center gap-4">
-                    {data?.navigationLinks?.map((navigationLink) => {
-                      if (!navigationLink?.fields?.childPages) {
-                        return (
-                          <MyLink
-                            onClick={() => {
-                              close();
-                            }}
-                            href={`/${navigationLink?.fields?.slug}`}
-                            key={`${navigationLink?.fields?.slug}`}
-                            target="_self"
-                            className="text-base font-medium text-gray-900 hover:text-gray-700"
-                          >
-                            {navigationLink?.fields?.title}
-                          </MyLink>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
+                <MobileMenuLinks navigationLinks={data?.navigationLinks} />
 
                 {data?.callToAction && (
                   <div className="mt-6">
@@ -350,6 +299,66 @@ const MobileMenuLogo = ({ logo, metaData }) => {
             />
           </div>
         </span>
+      </div>
+    )
+  );
+};
+
+const MobileMenuLinksNested = ({ navigationLinks }) => {
+  return (
+    navigationLinks &&
+    navigationLinks?.map((navigationLink) => {
+      if (navigationLink?.fields?.childPages) {
+        return (
+          <div className="mt-6" key={navigationLink?.fields?.title}>
+            <p className="font-bold uppercase tracking-wide text-gray-500">
+              {navigationLink?.fields?.title}
+            </p>
+            <nav className="mt-1 grid grid-cols-1 gap-2">
+              {navigationLink?.fields?.childPages?.map((childPage) => (
+                <MyLink
+                  onClick={() => {
+                    close();
+                  }}
+                  href={`/${childPage?.fields?.slug}`}
+                  target="_self"
+                  key={childPage?.fields?.slug}
+                  className="flex items-center rounded-lg py-1 text-gray-900 hover:bg-gray-50"
+                >
+                  <div className="text-theme-title text-base font-medium">
+                    {childPage?.fields?.title}
+                  </div>
+                </MyLink>
+              ))}
+            </nav>
+          </div>
+        );
+      }
+    })
+  );
+};
+
+const MobileMenuLinks = ({ navigationLinks }) => {
+  return (
+    navigationLinks && (
+      <div className="grid text-center gap-4">
+        {navigationLinks?.map((navigationLink) => {
+          if (!navigationLink?.fields?.childPages) {
+            return (
+              <MyLink
+                onClick={() => {
+                  close();
+                }}
+                href={`/${navigationLink?.fields?.slug}`}
+                key={`${navigationLink?.fields?.slug}`}
+                target="_self"
+                className="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                {navigationLink?.fields?.title}
+              </MyLink>
+            );
+          }
+        })}
       </div>
     )
   );
