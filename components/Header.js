@@ -134,26 +134,7 @@ export default function Header({ data, metaData }) {
               <div className="px-5 py-6">
                 <MobileMenuLinks navigationLinks={data?.navigationLinks} />
 
-                {data?.callToAction && (
-                  <div className="mt-6">
-                    {data?.callToAction?.map((ctaBtn) => {
-                      if (ctaBtn?.fields?.text) {
-                        return (
-                          <MyLink
-                            onClick={() => {
-                              close();
-                            }}
-                            href={`/${ctaBtn?.fields?.page?.fields?.slug}`}
-                            key={ctaBtn?.fields?.text}
-                            className="button flex w-full bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
-                          >
-                            {ctaBtn?.fields?.text}
-                          </MyLink>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
+                <MobileMenuCallToActions callToAction={data?.callToAction} />
               </div>
             </div>
           )}
@@ -355,6 +336,31 @@ const MobileMenuLinks = ({ navigationLinks }) => {
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 {navigationLink?.fields?.title}
+              </MyLink>
+            );
+          }
+        })}
+      </div>
+    )
+  );
+};
+
+const MobileMenuCallToActions = ({ callToAction }) => {
+  return (
+    callToAction && (
+      <div className="mt-6">
+        {callToAction?.map((ctaBtn) => {
+          if (ctaBtn?.fields?.text) {
+            return (
+              <MyLink
+                onClick={() => {
+                  close();
+                }}
+                href={`/${ctaBtn?.fields?.page?.fields?.slug}`}
+                key={ctaBtn?.fields?.text}
+                className="button flex w-full bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500"
+              >
+                {ctaBtn?.fields?.text}
               </MyLink>
             );
           }
