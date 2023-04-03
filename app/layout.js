@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getHeaderData, getMetaData, getFooterData } from "@/lib/api";
 
-export async function metadata({ params }) {
+export async function metadata() {
   const metaData = await getMetaData();
 
   return {
@@ -14,6 +14,7 @@ export async function metadata({ params }) {
       default: metaData?.defaultMetaTitle,
       template: "%s | " + metaData?.defaultMetaTitle,
     },
+    description: metaData?.description,
   };
 }
 
