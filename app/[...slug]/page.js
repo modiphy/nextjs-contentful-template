@@ -1,12 +1,18 @@
-import { getPageData, getPagePaths } from "@/lib/api";
+import { getMetaData, getPageData, getPagePaths } from "@/lib/api";
 import Section from "@/components/Section";
 import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const pageData = await getPageData(params.slug[params.slug.length - 1]);
+  const metaData = await getMetaData();
 
   return {
     title: pageData?.fields?.title,
+
+    metadataBase: new URL(`https://${metaData?.cleanUrl}`),
+    alternates: {
+      canonical: `/${params.slug[params.slug.length - 1]}`,
+    },
   };
 }
 
