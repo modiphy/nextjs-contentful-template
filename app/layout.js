@@ -28,6 +28,8 @@ export async function metadata() {
     },
 
     manifest: "/site.webmanifest",
+
+    themeColor: "#ffffff",
   };
 }
 
