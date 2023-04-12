@@ -13,6 +13,18 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/${params.slug[params.slug.length - 1]}`,
     },
+
+    openGraph: {
+      title: `${pageData?.fields?.title} - ${metaData?.defaultMetaTitle}`,
+      description: metaData?.description,
+      images: [{ url: "/og-image.png" }],
+      locale: "en_US",
+      type: "website",
+      url: `https://${metaData?.cleanUrl}/${
+        params.slug[params.slug.length - 1]
+      }`,
+      siteName: `${metaData?.organizationName} - Website`,
+    },
   };
 }
 

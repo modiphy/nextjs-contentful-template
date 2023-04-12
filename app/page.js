@@ -10,6 +10,16 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/`,
     },
+
+    openGraph: {
+      title: metaData?.defaultMetaTitle,
+      description: metaData?.description,
+      images: [{ url: "/og-image.png" }],
+      locale: "en_US",
+      type: "website",
+      url: `https://${metaData?.cleanUrl}`,
+      siteName: `${metaData?.organizationName} - Website`,
+    },
   };
 }
 
