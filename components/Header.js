@@ -128,13 +128,20 @@ export default function Header({ data, metaData }) {
 
                 <MobileMenuLinksNested
                   navigationLinks={data?.navigationLinks}
+                  close={close}
                 />
               </div>
 
               <div className="px-5 py-6">
-                <MobileMenuLinks navigationLinks={data?.navigationLinks} />
+                <MobileMenuLinks
+                  navigationLinks={data?.navigationLinks}
+                  close={close}
+                />
 
-                <MobileMenuCallToActions callToAction={data?.callToAction} />
+                <MobileMenuCallToActions
+                  callToAction={data?.callToAction}
+                  close={close}
+                />
               </div>
             </div>
           )}
@@ -285,7 +292,7 @@ const MobileMenuLogo = ({ logo, metaData }) => {
   );
 };
 
-const MobileMenuLinksNested = ({ navigationLinks }) => {
+const MobileMenuLinksNested = ({ navigationLinks, close }) => {
   return (
     navigationLinks &&
     navigationLinks?.map((navigationLink) => {
@@ -319,7 +326,7 @@ const MobileMenuLinksNested = ({ navigationLinks }) => {
   );
 };
 
-const MobileMenuLinks = ({ navigationLinks }) => {
+const MobileMenuLinks = ({ navigationLinks, close }) => {
   return (
     navigationLinks && (
       <div className="grid gap-4 text-center">
@@ -345,7 +352,7 @@ const MobileMenuLinks = ({ navigationLinks }) => {
   );
 };
 
-const MobileMenuCallToActions = ({ callToAction }) => {
+const MobileMenuCallToActions = ({ callToAction, close }) => {
   return (
     callToAction && (
       <div className="mt-6">
