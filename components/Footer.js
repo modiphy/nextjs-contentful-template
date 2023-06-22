@@ -34,7 +34,7 @@ const FooterInformation = ({ footerInformation }) => {
     footerInformation && (
       <div className="space-y-5 lg:flex lg:justify-between lg:space-y-0">
         {footerInformation?.map((footerInfoItem) => (
-          <ContactInformationItem {...footerInfoItem?.fields} />
+          <ContactInformationItem {...footerInfoItem?.fields} key={uniqid()} />
         ))}
       </div>
     )
