@@ -31,12 +31,10 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const pageData = await getPageData(params?.slug?.[params?.slug?.length - 1]);
 
-  const { sections } = pageData?.fields;
-
   return (
     <>
-      {sections ? (
-        sections.map((pageSection) => {
+      {pageData?.fields?.sections ? (
+        pageData?.fields?.sections.map((pageSection) => {
           return <Section data={pageSection} key={pageSection.fields.title} />;
         })
       ) : (
