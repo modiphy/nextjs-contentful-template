@@ -2,6 +2,7 @@ import { getFooterData, getMetaData } from "../lib/api";
 import Link from "next/link";
 import ContactInformationItem from "./ContactInformationItem";
 import Image from "next/legacy/image";
+import uniqid from "uniqid";
 
 export default async function Footer() {
   const data = await getFooterData();
@@ -16,7 +17,7 @@ export default async function Footer() {
 
         <div>
           <FooterLogo footerLogo={data?.footerLogo} metaData={metaData} />
-          
+
           <ModiphyBannerFooter metaData={metaData} />
 
           <FooterSocialMediaLinks
