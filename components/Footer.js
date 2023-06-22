@@ -27,11 +27,7 @@ const FooterInformation = ({ footerInformation }) => {
     footerInformation && (
       <div className="space-y-5 lg:flex lg:justify-between lg:space-y-0">
         {footerInformation?.map((footerInfoItem) => (
-          <ContactInformationItem
-            title={footerInfoItem?.fields?.title}
-            body={footerInfoItem?.fields?.body}
-            key={footerInfoItem?.fields?.title}
-          />
+          <ContactInformationItem {...footerInfoItem?.fields} />
         ))}
       </div>
     )
