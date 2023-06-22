@@ -51,6 +51,7 @@ export default function Section({ data, marginBottom, marginTop }) {
           id={fields.id}
           marginBottom={marginBottom}
           marginTop={marginTop}
+          blogPosts={blogPosts}
         />
       </>
     );
