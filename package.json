@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/f36-datetime": "^4.44.0",
     "@contentful/rich-text-react-renderer": "^15.16.2",
     "@contentful/rich-text-types": "^16.0.2",
     "@headlessui/react": "^1.7.11",
@@ -26,7 +27,8 @@
     "next-sitemap": "^3.1.52",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.31.3",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
