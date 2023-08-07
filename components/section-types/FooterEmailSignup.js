@@ -20,7 +20,7 @@ export default function FooterEmailSignup({ title }) {
               autoComplete="off"
               encType="multipart/form-data"
               method="post"
-              action="https://modiphy.wufoo.com/forms/zzb9yb30rquiqj/#public"
+              action="placeholder" // Replace with actual form action
             >
               <label htmlFor="emailAddress" className="sr-only">
                 Email address
@@ -53,6 +53,9 @@ export default function FooterEmailSignup({ title }) {
                   rows="1"
                   cols="1"
                 ></textarea>
+
+                {/* The two input tags are placeholder. Get input tags from actual form */}
+
                 <input
                   type="hidden"
                   id="idstamp"
